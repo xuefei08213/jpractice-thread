@@ -32,6 +32,7 @@ public class StampLockPessimistic {
         },"tl1").start();
 
         Thread.sleep(3000);
+        System.out.println("释放读锁");
         stampedLock1.unlockRead(stamp1_1);
 
         System.out.println(Thread.currentThread().getName()+" release read lock1,stamp="+stamp1_1);

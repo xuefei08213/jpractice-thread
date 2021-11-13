@@ -13,7 +13,7 @@ public class StampLockOptimistic {
         System.out.println(Thread.currentThread().getName() + " tryOptimisticRead stamp = " + stamp);
 
         long stamp2 = stampedLock2.tryOptimisticRead();
-        System.out.println(Thread.currentThread().getName() + " tryOptimisticRead stamp2 = " + stamp);
+        System.out.println(Thread.currentThread().getName() + " tryOptimisticRead stamp2 = " + stamp2);
 
         new Thread(()->{
             System.out.println(Thread.currentThread().getName() + " run");
